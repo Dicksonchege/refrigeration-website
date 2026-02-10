@@ -1,0 +1,139 @@
+:root {
+  /* Light "Frost" Palette */
+  --bg-color: #f4faff;
+  /* Very light ice blue */
+  --bg-secondary: #ffffff;
+  /* White for cards */
+
+  /* The "Deep Freeze" Ice Blue Accent - Kept for branding */
+  --primary-color: #00d2ff;
+  --primary-text: #007bb5;
+  /* Darker blue for text readability */
+  --primary-gradient: linear-gradient(90deg, #00d2ff 0%, #0078ff 100%);
+  --primary-dark: #0078ff;
+
+  --text-main: #0f172a;
+  /* Dark Slate / Navy for main text */
+  --text-muted: #475569;
+  /* Slate Gray */
+
+  --glass: rgba(255, 255, 255, 0.8);
+  /* Frosted White */
+  --glass-border: rgba(0, 210, 255, 0.2);
+
+  --font-family: 'Inter', system-ui, sans-serif;
+
+  --shadow-glow: 0 10px 40px rgba(0, 210, 255, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Typography matching the elegant thin look */
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  /* Thin/Light font weight */
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+h1 {
+  letter-spacing: -2px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  /* Boxy/Sharp look from reference? Or slight radius. Reference has slight curve or sharp. Let's go slight 4px */
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #000;
+  /* Black text on blue contrast */
+  box-shadow: 0 10px 30px -10px rgba(0, 210, 255, 0.5);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px -10px rgba(0, 210, 255, 0.7);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 60px;
+  text-align: left;
+  /* Reference aligns often to left */
+}
+
+/* Global Section Spacing */
+.section-padding {
+  padding: 120px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Utilities */
+.text-green {
+  color: var(--primary-color);
+}

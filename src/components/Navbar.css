@@ -1,0 +1,206 @@
+/* Standard Navbar - Light Frost Theme */
+.navbar {
+    background: transparent;
+    padding-top: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 80px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    background: transparent;
+    /* Reset from pill white bg */
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0;
+}
+
+.navbar.scrolled .navbar-container {
+    width: 100%;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+/* PlumbinX Style Brand Box */
+.navbar-logo {
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--primary-color);
+    /* The Brand Color Background */
+    height: 120px;
+    /* Taller than navbar to hang down */
+    padding: 0 40px;
+    border-bottom-right-radius: 40px;
+    /* The rounded corner effect */
+    margin-left: -40px;
+    /* Pull to edge of container/screen */
+    padding-left: 60px;
+    /* Compensate for pull */
+    margin-top: -20px;
+    box-shadow: 5px 5px 20px rgba(0, 210, 255, 0.3);
+    position: relative;
+    z-index: 1001;
+}
+
+.navbar.scrolled .navbar-logo {
+    height: 100%;
+    /* Shrink when scrolled */
+    margin-top: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 0;
+    padding-left: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Update text colors for contrast on the blue background */
+.navbar-logo .logo-main,
+.navbar-logo .logo-sub {
+    color: #fff;
+    /* White text on Blue background (Initially) */
+}
+
+/* Revert text color on scroll (when transparent) */
+.navbar.scrolled .navbar-logo .logo-main {
+    color: var(--text-main);
+    /* Dark Text when scrolled */
+}
+
+.navbar.scrolled .navbar-logo .logo-sub {
+    color: var(--primary-text);
+}
+
+.navbar.scrolled .logo-icon {
+    color: var(--primary-color);
+}
+
+.logo-icon {
+    font-size: 2rem;
+    color: #fff;
+    /* White icon on blue */
+    animation: spin-slow 10s linear infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1;
+}
+
+.logo-main {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: inherit;
+    /* Reset from pill black */
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    /* Restore subtext */
+    color: inherit;
+}
+
+.nav-links-btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.5);
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+/* Add arrow circle like reference */
+.nav-links-btn::after {
+    content: '→';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: inherit;
+    /* Inherit from button */
+}
+
+.nav-links-btn:hover::after {
+    background: var(--primary-color);
+    color: #fff;
+    transform: rotate(-45deg);
+}
+
+/* Mobile */
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        width: 95%;
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-links-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

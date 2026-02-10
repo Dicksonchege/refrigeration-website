@@ -1,0 +1,93 @@
+/* Contact Page - Day City Theme */
+.contact-page {
+    background: var(--bg-color);
+    min-height: 100vh;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    border-left: 4px solid #7b2cbf;
+    /* Purple Accent */
+    box-shadow: 0 10px 30px rgba(123, 44, 191, 0.1);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #7b2cbf;
+    /* Purple Icon */
+    background: rgba(123, 44, 191, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon {
+    color: #25d366;
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.contact-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: var(--text-muted);
+    font-weight: 400;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+}
+
+.contact-item a:hover {
+    color: #fff;
+}
+
+.map-container {
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 960px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 350px;
+    }
+}

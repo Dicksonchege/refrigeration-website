@@ -1,0 +1,40 @@
+/* Services Page - Light Industrial Frost Theme */
+.services-page {
+    background: var(--bg-color);
+    min-height: 100vh;
+}
+
+.services-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Enhanced Grid with Cards getting colorful borders */
+.services-grid-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+/* Target Service Cards inside this page for extra pop */
+.services-grid-page .service-card {
+    background: #fff;
+    border: 1px solid rgba(0, 210, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.services-grid-page .service-card p {
+    color: var(--text-muted);
+}
+
+.services-grid-page .service-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.15);
+}
+
+.services-grid-page .service-card .icon {
+    color: var(--primary-text);
+}

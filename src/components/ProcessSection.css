@@ -1,0 +1,108 @@
+.process-section {
+    background-color: var(--bg-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern */
+.process-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--glass-border) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    position: relative;
+}
+
+.process-item {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    background: var(--bg-color);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.process-item:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.process-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    line-height: 1;
+}
+
+.process-item:hover .process-number {
+    color: rgba(255, 255, 255, 0.08);
+}
+
+.process-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.process-item:hover .process-icon {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.process-item h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.process-item p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Connectors for Desktop */
+@media screen and (min-width: 900px) {
+    .process-connector {
+        position: absolute;
+        top: 60px;
+        /* Aligned with icon center roughly */
+        right: -50%;
+        /* Reach halfway to next item */
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--primary-color) 0%, transparent 100%);
+        z-index: 1;
+        opacity: 0.3;
+        display: none;
+        /* Tricky to implement perfectly with grid, simplified via dashed border approach or hidden */
+    }
+}

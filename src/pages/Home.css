@@ -1,0 +1,291 @@
+/* Dark aesthetic resets */
+.home-page {
+    background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+/* =========================================
+   Refix Template - Split Slider Style 
+   ========================================= */
+
+.hero-slider-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    background: #fff;
+    padding-top: 100px;
+    /* Navbar space */
+}
+
+/* Slide Container */
+.hero-slide {
+    position: absolute;
+    top: 100px;
+    /* Match padding-top */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* LEFT SIDE: Content */
+.hero-split-content {
+    flex: 1;
+    background: #eff6fa;
+    /* Light Blue-ish White from Refix */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.content-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+.content-wrapper h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.content-wrapper h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: #1a1a1a;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* RIGHT SIDE: Image */
+.hero-split-image {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-split-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 6s ease;
+    /* Subtle zoom effect */
+}
+
+.hero-slide.active .hero-split-image img {
+    transform: scale(1.05);
+    /* Zoom in when active */
+}
+
+/* CTA Button - Orange/Yellow */
+.refix-btn {
+    display: inline-block;
+    background: #fcb900;
+    /* Refix Yellow-Orange */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 4px;
+    /* Slightly squared */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(252, 185, 0, 0.3);
+}
+
+.refix-btn:hover {
+    background: #e5a800;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(252, 185, 0, 0.4);
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-color);
+    transform: scale(1.3);
+}
+
+/* Animations */
+.animate-text {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+
+/* Stats */
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+/* Featured Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Mobile Responsiveness - UPGRADED */
+@media screen and (max-width: 1024px) {
+    .hero-slider-section {
+        height: 100vh !important;
+        padding-top: 80px !important;
+        background: #fff !important;
+        overflow: hidden !important;
+    }
+
+    .hero-slide {
+        position: absolute !important;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        /* Force Stack */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    .hero-slide.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 20;
+    }
+
+    /* Image on Top (50%) */
+    .hero-split-image {
+        flex: none !important;
+        height: 50% !important;
+        width: 100% !important;
+        order: -1 !important;
+        position: relative;
+    }
+
+    .hero-split-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Content on Bottom (50%) */
+    .hero-split-content {
+        flex: none !important;
+        height: 50% !important;
+        width: 100% !important;
+        padding: 20px !important;
+        text-align: center !important;
+        background: #eff6fa !important;
+        /* Ensure Light Blue BG */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .content-wrapper {
+        width: 100% !important;
+        padding-top: 0 !important;
+    }
+
+    .content-wrapper h4 {
+        font-size: 0.85rem !important;
+        margin-bottom: 8px !important;
+        color: var(--primary-color) !important;
+    }
+
+    .content-wrapper h1 {
+        font-size: 1.6rem !important;
+        margin-bottom: 15px !important;
+        line-height: 1.2 !important;
+        color: #1a1a1a !important;
+    }
+
+    .refix-btn {
+        padding: 10px 25px !important;
+        font-size: 0.9rem !important;
+        background: #fcb900 !important;
+        color: #fff !important;
+    }
+
+    .slider-dots {
+        justify-content: center !important;
+        margin-top: 15px !important;
+    }
+
+    /* Hide difficult elements on mobile if needed */
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

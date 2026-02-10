@@ -1,0 +1,68 @@
+/* About Page - Light Frost Theme */
+.about-page {
+    background: var(--bg-color);
+    /* Use global light bg */
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h3 {
+    color: #bfa100;
+    /* Darker gold/bronze for visibility on white */
+    /* Gold Accent for prestige */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.expertise-list li {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    border-left: 3px solid #bfa100;
+    /* Gold border */
+    color: var(--text-main);
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-list {
+        grid-template-columns: 1fr;
+    }
+}
