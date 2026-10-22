@@ -44,8 +44,7 @@
 /* LEFT SIDE: Content */
 .hero-split-content {
     flex: 1;
-    background: #eff6fa;
-    /* Light Blue-ish White from Refix */
+    background: var(--bg-color);
     height: 100%;
     display: flex;
     align-items: center;
@@ -70,7 +69,7 @@
 .content-wrapper h1 {
     font-size: 3.5rem;
     line-height: 1.2;
-    color: #1a1a1a;
+    color: var(--heading-color);
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -100,23 +99,22 @@
 /* CTA Button - Orange/Yellow */
 .refix-btn {
     display: inline-block;
-    background: #fcb900;
-    /* Refix Yellow-Orange */
-    color: #fff;
+    background: var(--btn-primary-bg, var(--primary-color));
+    color: var(--btn-primary-text, #fff);
     font-size: 1rem;
     font-weight: 700;
     padding: 16px 40px;
-    border-radius: 4px;
-    /* Slightly squared */
+    border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(252, 185, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .refix-btn:hover {
-    background: #e5a800;
+    background: var(--btn-primary-hover, var(--secondary-color));
+    color: var(--btn-primary-text, #fff);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(252, 185, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Slider Dots */
@@ -170,8 +168,8 @@
     display: flex;
     justify-content: space-around;
     padding: 60px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .stat-item h2 {

@@ -28,7 +28,7 @@ const ContactInfoSection = () => {
                             <FaMapMarkerAlt />
                         </div>
                         <h3>Visit Us</h3>
-                        <p>Mukaa House, Chavakali–Busia Road</p>
+                        <p>Charles Rubi Rd, Nairobi</p>
                     </div>
                 </div>
             </div>

@@ -23,14 +23,15 @@
     background: var(--bg-secondary);
     border-radius: 16px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
 }
 
 .gallery-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-glow);
 }
 
 .gallery-img-wrapper {
@@ -71,7 +72,8 @@
 .gallery-info h3 {
     font-size: 1.3rem;
     margin-bottom: 10px;
-    color: #fff;
+    color: var(--heading-color);
+    font-weight: 700;
 }
 
 .gallery-info p {

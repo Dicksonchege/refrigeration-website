@@ -21,9 +21,9 @@
 
 /* Target Service Cards inside this page for extra pop */
 .services-grid-page .service-card {
-    background: #fff;
-    border: 1px solid rgba(0, 210, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .services-grid-page .service-card p {
@@ -32,9 +32,9 @@
 
 .services-grid-page .service-card:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.15);
+    box-shadow: var(--shadow-glow);
 }
 
 .services-grid-page .service-card .icon {
-    color: var(--primary-text);
+    color: var(--primary-color);
 }

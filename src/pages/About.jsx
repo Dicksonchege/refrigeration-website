@@ -14,7 +14,7 @@ const About = () => {
                             ourselves as a trusted name for both residential and commercial clients.
                         </p>
                         <p>
-                            Located at Mukaa House on Chavakali–Busia Road, our strategic location allows us to respond
+                            Located on Charles Rubi Rd in Nairobi, our strategic location allows us to respond
                             quickly to service calls and emergency repairs.
                         </p>
 

@@ -28,23 +28,22 @@
     margin-bottom: 25px;
     display: inline-flex;
     padding: 15px;
-    background: rgba(39, 201, 109, 0.1);
+    background: rgba(7, 159, 232, 0.1);
     border-radius: 12px;
     transition: all 0.3s ease;
 }
 
 .feature-item:hover .feature-icon-wrapper {
     background: var(--primary-color);
-    color: var(--bg-color);
-    /* Invert colors on hover */
-    box-shadow: 0 0 20px rgba(39, 201, 109, 0.4);
+    color: var(--btn-primary-text, #fff);
+    box-shadow: 0 0 20px rgba(7, 159, 232, 0.4);
 }
 
 .feature-title {
     font-size: 1.5rem;
-    color: var(--text-main);
+    color: var(--heading-color);
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .feature-description {

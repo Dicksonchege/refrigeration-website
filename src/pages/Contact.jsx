@@ -21,7 +21,7 @@ const Contact = () => {
                             <FaEnvelope className="contact-icon" />
                             <div>
                                 <h3>Email</h3>
-                                <p>davckrefrigeration@gmail.com</p>
+                                <p><a href="mailto:davckrefrigeration@gmail.com">davckrefrigeration@gmail.com</a></p>
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@ const Contact = () => {
                             <FaMapMarkerAlt className="contact-icon" />
                             <div>
                                 <h3>Location</h3>
-                                <p>Mukaa House, Chavakali–Busia Road</p>
+                                <p>Charles Rubi Rd, Nairobi</p>
                             </div>
                         </div>
 
@@ -50,10 +50,8 @@ const Contact = () => {
                     </div>
 
                     <div className="map-container">
-                        {/* Embedding a generic map pointing to Kenya/Western Region or Chavakali as specific road might not be on generic google maps without exact coords. 
-                Using Chavakali as a reference point. */}
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15959.030584742784!2d34.7214!3d0.1000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x178005691c26b003%3A0xc3480373c2620786!2sChavakali%2C%20Kenya!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                            src="https://maps.google.com/maps?q=Charles+Rubi+Rd,+Nairobi,+Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="450"
                             style={{ border: 0 }}

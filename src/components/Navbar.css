@@ -15,10 +15,10 @@
 }
 
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: var(--header-scrolled-bg, rgba(255, 255, 255, 0.96));
+    box-shadow: var(--shadow-sm, 0 4px 15px rgba(0, 0, 0, 0.05));
     height: 80px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--border-color, rgba(0, 0, 0, 0.05));
 }
 
 .navbar-container {
@@ -80,21 +80,19 @@
     box-shadow: none;
 }
 
-/* Update text colors for contrast on the blue background */
+/* Update text colors for contrast on the brand background */
 .navbar-logo .logo-main,
 .navbar-logo .logo-sub {
-    color: #fff;
-    /* White text on Blue background (Initially) */
+    color: var(--btn-primary-text, #fff);
 }
 
 /* Revert text color on scroll (when transparent) */
 .navbar.scrolled .navbar-logo .logo-main {
     color: var(--text-main);
-    /* Dark Text when scrolled */
 }
 
 .navbar.scrolled .navbar-logo .logo-sub {
-    color: var(--primary-text);
+    color: var(--primary-color);
 }
 
 .navbar.scrolled .logo-icon {
@@ -103,8 +101,7 @@
 
 .logo-icon {
     font-size: 2rem;
-    color: #fff;
-    /* White icon on blue */
+    color: var(--btn-primary-text, #fff);
     animation: spin-slow 10s linear infinite;
 }
 
@@ -143,16 +140,45 @@
     color: inherit;
 }
 
-.nav-links-btn {
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-theme-btn {
+    background: rgba(7, 159, 232, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.nav-theme-btn:hover {
     background: var(--primary-color);
-    color: #fff;
+    color: var(--btn-primary-text, #fff);
+    transform: scale(1.08) rotate(15deg);
+    border-color: var(--primary-color);
+}
+
+.nav-links-btn {
+    background: var(--btn-primary-bg, var(--primary-color));
+    color: var(--btn-primary-text, #fff);
     padding: 12px 30px;
     border-radius: 50px;
     margin-left: 20px;
     text-decoration: none;
     font-weight: 700;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -160,9 +186,9 @@
 
 .nav-links-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.5);
-    background: var(--primary-dark);
-    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    background: var(--btn-primary-hover, var(--primary-dark));
+    color: var(--btn-primary-text, #fff);
 }
 
 /* Add arrow circle like reference */
@@ -173,17 +199,16 @@
     justify-content: center;
     width: 24px;
     height: 24px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     font-size: 14px;
     transition: all 0.3s ease;
     color: inherit;
-    /* Inherit from button */
 }
 
 .nav-links-btn:hover::after {
-    background: var(--primary-color);
-    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    color: inherit;
     transform: rotate(-45deg);
 }
 

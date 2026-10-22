@@ -12,7 +12,7 @@ const FAQ = () => {
         },
         {
             question: "What areas do you cover?",
-            answer: "We primarily serve the Western Kenya region including Chavakali, Busia, and surrounding areas, but we are available for major projects countrywide."
+            answer: "We primarily serve Nairobi, Western Kenya, and surrounding areas, and we are available for major projects countrywide."
         },
         {
             question: "Do you provide a warranty for your repairs?",

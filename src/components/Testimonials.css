@@ -9,16 +9,19 @@
 }
 
 .testimonial-card {
-    background: var(--white);
+    background: var(--bg-secondary);
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
 }
 
 .quote-icon {
@@ -31,17 +34,18 @@
 .testimonial-text {
     font-style: italic;
     margin-bottom: 20px;
-    color: var(--text-color);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
 .testimonial-author h4 {
-    color: var(--secondary-color);
+    color: var(--heading-color);
     margin-bottom: 5px;
     font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .testimonial-author span {
-    color: var(--light-text);
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
