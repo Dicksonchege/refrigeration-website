@@ -99,6 +99,21 @@
     color: var(--primary-color);
 }
 
+.navbar-logo-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover .navbar-logo-img {
+    transform: scale(1.05);
+}
+
 .logo-icon {
     font-size: 2rem;
     color: var(--btn-primary-text, #fff);

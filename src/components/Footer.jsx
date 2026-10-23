@@ -10,7 +10,10 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-section">
-                    <h3>Davick Refrigeration</h3>
+                    <div className="footer-brand-header">
+                        <img src="/favicon-48x48.png" alt="Davick Refrigeration Logo" className="footer-logo-img" />
+                        <h3>Davick Refrigeration</h3>
+                    </div>
                     <p>Professional Refrigeration & HVAC Services You Can Trust.</p>
                 </div>
                 <div className="footer-section">

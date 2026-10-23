@@ -30,7 +30,7 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container navbar-container">
                 <Link to="/" className="navbar-logo" onClick={() => setIsOpen(false)}>
-                    <FaSnowflake className="logo-icon" />
+                    <img src="/favicon-48x48.png" alt="Davick Refrigeration Logo" className="navbar-logo-img" />
                     <div className="logo-text">
                         <span className="logo-main">Davick</span>
                         <span className="logo-sub">Refrigeration</span>
